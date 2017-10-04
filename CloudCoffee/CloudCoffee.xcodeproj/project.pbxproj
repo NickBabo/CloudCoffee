@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */; };
+		B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9141F85679C00F60667 /* Coffee.swift */; };
+		E39BED801F8567F10055A5F5 /* PublicCoffeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */; };
 		E3D3C7D11F8546AC0066716B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D01F8546AC0066716B /* AppDelegate.swift */; };
 		E3D3C7D31F8546AC0066716B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D21F8546AC0066716B /* ViewController.swift */; };
 		E3D3C7D61F8546AC0066716B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D3C7D41F8546AC0066716B /* Main.storyboard */; };
@@ -15,6 +18,7 @@
 		E3D3C7DE1F8546AC0066716B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D3C7DC1F8546AC0066716B /* LaunchScreen.storyboard */; };
 		E3D3C7E91F8546AC0066716B /* CloudCoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7E81F8546AC0066716B /* CloudCoffeeTests.swift */; };
 		E3D3C7F41F8546AC0066716B /* CloudCoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7F31F8546AC0066716B /* CloudCoffeeUITests.swift */; };
+		E3D3C8041F8549110066716B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D3C8031F8549110066716B /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUser.swift; sourceTree = "<group>"; };
+		B0C3D9141F85679C00F60667 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicCoffeeListViewController.swift; sourceTree = "<group>"; };
 		E3D3C7CD1F8546AB0066716B /* CloudCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3C7D01F8546AC0066716B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D3C7D21F8546AC0066716B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,8 @@
 		E3D3C7EF1F8546AC0066716B /* CloudCoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3C7F31F8546AC0066716B /* CloudCoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCoffeeUITests.swift; sourceTree = "<group>"; };
 		E3D3C7F51F8546AC0066716B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D3C8011F8549090066716B /* CloudCoffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudCoffee.entitlements; sourceTree = "<group>"; };
+		E3D3C8031F8549110066716B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D3C8041F8549110066716B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0C3D9131F8565DA00F60667 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */,
+				B0C3D9141F85679C00F60667 /* Coffee.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		E3D3C7C41F8546AB0066716B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +102,7 @@
 				E3D3C7E71F8546AC0066716B /* CloudCoffeeTests */,
 				E3D3C7F21F8546AC0066716B /* CloudCoffeeUITests */,
 				E3D3C7CE1F8546AB0066716B /* Products */,
+				E3D3C8021F8549110066716B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +119,8 @@
 		E3D3C7CF1F8546AC0066716B /* CloudCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				B0C3D9131F8565DA00F60667 /* Entity */,
+				E3D3C8011F8549090066716B /* CloudCoffee.entitlements */,
 				E3D3C7D01F8546AC0066716B /* AppDelegate.swift */,
 				E3D3C7D21F8546AC0066716B /* ViewController.swift */,
 				E3D3C7D41F8546AC0066716B /* Main.storyboard */,
@@ -106,6 +128,7 @@
 				E3D3C7DC1F8546AC0066716B /* LaunchScreen.storyboard */,
 				E3D3C7DF1F8546AC0066716B /* Info.plist */,
 				E3D3C7D71F8546AC0066716B /* CloudCoffee.xcdatamodeld */,
+				E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */,
 			);
 			path = CloudCoffee;
 			sourceTree = "<group>";
@@ -126,6 +149,14 @@
 				E3D3C7F51F8546AC0066716B /* Info.plist */,
 			);
 			path = CloudCoffeeUITests;
+			sourceTree = "<group>";
+		};
+		E3D3C8021F8549110066716B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3C8031F8549110066716B /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +228,14 @@
 					E3D3C7CC1F8546AB0066716B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					E3D3C7E31F8546AC0066716B = {
 						CreatedOnToolsVersion = 9.0;
@@ -263,8 +302,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D3C7D31F8546AC0066716B /* ViewController.swift in Sources */,
+				E39BED801F8567F10055A5F5 /* PublicCoffeeListViewController.swift in Sources */,
 				E3D3C7D91F8546AC0066716B /* CloudCoffee.xcdatamodeld in Sources */,
+				B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */,
 				E3D3C7D11F8546AC0066716B /* AppDelegate.swift in Sources */,
+				B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudCoffee/CloudCoffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53BLZ9DZN8;
 				INFOPLIST_FILE = CloudCoffee/Info.plist;
@@ -445,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudCoffee/CloudCoffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53BLZ9DZN8;
 				INFOPLIST_FILE = CloudCoffee/Info.plist;
