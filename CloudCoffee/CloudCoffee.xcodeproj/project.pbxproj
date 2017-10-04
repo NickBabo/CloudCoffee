@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49754FE41F8575D0008314C4 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49754FE31F8575D0008314C4 /* NameTableViewCell.swift */; };
+		49754FE61F857670008314C4 /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49754FE51F857670008314C4 /* CoffeeTableViewCell.swift */; };
 		B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */; };
 		B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9141F85679C00F60667 /* Coffee.swift */; };
 		E341902F1F857523008ED84E /* PublicCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49754FE31F8575D0008314C4 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		49754FE51F857670008314C4 /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
 		B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUser.swift; sourceTree = "<group>"; };
 		B0C3D9141F85679C00F60667 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicCoffeeTableViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				E3D3C7D01F8546AC0066716B /* AppDelegate.swift */,
 				E3D3C7D21F8546AC0066716B /* ViewController.swift */,
 				E3D3C7D41F8546AC0066716B /* Main.storyboard */,
+				49754FE51F857670008314C4 /* CoffeeTableViewCell.swift */,
+				49754FE31F8575D0008314C4 /* NameTableViewCell.swift */,
 				E3D3C7DA1F8546AC0066716B /* Assets.xcassets */,
 				E3D3C7DC1F8546AC0066716B /* LaunchScreen.storyboard */,
 				E3D3C7DF1F8546AC0066716B /* Info.plist */,
