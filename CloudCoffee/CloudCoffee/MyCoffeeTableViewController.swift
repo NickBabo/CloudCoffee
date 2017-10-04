@@ -1,5 +1,5 @@
 //
-//  NewCoffeeTableViewController.swift
+//  MyCoffeeTableViewController.swift
 //  CloudCoffee
 //
 //  Created by Nicholas Babo on 04/10/17.
@@ -9,26 +9,41 @@
 import UIKit
 import CloudKit
 
-class NewCoffeeTableViewController: UITableViewController {
+class MyCoffeeTableViewController: UITableViewController {
     
-    @IBOutlet weak var outletCoffeeName: UITextField!
-    
-    @IBOutlet weak var outletPlace: UITextField!
-    
-    @IBOutlet weak var outletPrice: UITextField!
-    
-    @IBOutlet weak var outletStars: UITextField!
-    
+    var myCoffees = [CKRecord]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadData(){
+        self.myCoffees = [CKRecord]()
+        
+        let publicData = CKContainer.default().publicCloudDatabase
+        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        
+        publicData.perform(query, inZoneWith: nil) { (results, error) in
+            if let coffees = results{
+                self.myCoffees = coffees
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -40,27 +55,8 @@ class NewCoffeeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 0
     }
-    
-    @IBAction func saveCoffee(_ sender: Any) {
-        
-        let newCoffee = CKRecord(recordType: "Coffee")
-        newCoffee["name"] = self.outletCoffeeName.text as CKRecordValue?
-        newCoffee["place"] = self.outletPlace.text! as CKRecordValue
-        newCoffee["price"] = self.outletPrice.text as CKRecordValue?
-        newCoffee["stars"] = self.outletStars.text! as CKRecordValue
-        newCoffee["owner"] = UserDefaults.standard.string(forKey: "userToken") as CKRecordValue?
-        
-        let publicData = CKContainer.default().publicCloudDatabase
-        publicData.save(newCoffee) { (record, error) in
-            if error == nil{
-                print("saved coffee!")
-            }
-        }
-        
-    }
-    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
