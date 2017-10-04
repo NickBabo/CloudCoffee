@@ -113,7 +113,7 @@
         <!--New Coffee-->
         <scene sceneID="Pwy-vO-cGY">
             <objects>
-                <tableViewController id="8Ac-Vg-vi6" sceneMemberID="viewController">
+                <tableViewController id="8Ac-Vg-vi6" customClass="NewCoffeeTableViewController" customModule="CloudCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GbN-so-qxw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,8 +226,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Coffee" id="RdS-Lw-Lag">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5rb-qa-gcX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5rb-qa-gcX">
+                            <connections>
+                                <action selector="saveCoffee:" destination="8Ac-Vg-vi6" id="ZxM-eZ-XuI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="outletCoffeeName" destination="bKj-jm-aaq" id="tTz-TI-2yd"/>
+                        <outlet property="outletPlace" destination="2gD-vE-yzm" id="vWT-S5-spO"/>
+                        <outlet property="outletPrice" destination="8qJ-6U-AUG" id="tJF-k3-Fk4"/>
+                        <outlet property="outletStars" destination="Hr2-AT-j26" id="bCD-9e-Wz4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPU-ZG-cdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

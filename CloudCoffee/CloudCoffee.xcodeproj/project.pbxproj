@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */; };
 		B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9141F85679C00F60667 /* Coffee.swift */; };
-		E39BED801F8567F10055A5F5 /* PublicCoffeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */; };
+		E341902F1F857523008ED84E /* PublicCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */; };
+		E34190331F8576DE008ED84E /* NewCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34190321F8576DE008ED84E /* NewCoffeeTableViewController.swift */; };
 		E39BED821F856CE30055A5F5 /* TesteStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39BED811F856CE30055A5F5 /* TesteStoryboard.storyboard */; };
 		E3D3C7D11F8546AC0066716B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D01F8546AC0066716B /* AppDelegate.swift */; };
 		E3D3C7D31F8546AC0066716B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D21F8546AC0066716B /* ViewController.swift */; };
@@ -42,7 +43,8 @@
 /* Begin PBXFileReference section */
 		B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUser.swift; sourceTree = "<group>"; };
 		B0C3D9141F85679C00F60667 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
-		E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicCoffeeListViewController.swift; sourceTree = "<group>"; };
+		E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicCoffeeTableViewController.swift; sourceTree = "<group>"; };
+		E34190321F8576DE008ED84E /* NewCoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCoffeeTableViewController.swift; sourceTree = "<group>"; };
 		E39BED811F856CE30055A5F5 /* TesteStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TesteStoryboard.storyboard; sourceTree = "<group>"; };
 		E3D3C7CD1F8546AB0066716B /* CloudCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3C7D01F8546AC0066716B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,8 +132,9 @@
 				E3D3C7DC1F8546AC0066716B /* LaunchScreen.storyboard */,
 				E3D3C7DF1F8546AC0066716B /* Info.plist */,
 				E3D3C7D71F8546AC0066716B /* CloudCoffee.xcdatamodeld */,
-				E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */,
 				E39BED811F856CE30055A5F5 /* TesteStoryboard.storyboard */,
+				E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */,
+				E34190321F8576DE008ED84E /* NewCoffeeTableViewController.swift */,
 			);
 			path = CloudCoffee;
 			sourceTree = "<group>";
@@ -306,11 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D3C7D31F8546AC0066716B /* ViewController.swift in Sources */,
-				E39BED801F8567F10055A5F5 /* PublicCoffeeListViewController.swift in Sources */,
 				E3D3C7D91F8546AC0066716B /* CloudCoffee.xcdatamodeld in Sources */,
 				B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */,
 				E3D3C7D11F8546AC0066716B /* AppDelegate.swift in Sources */,
 				B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */,
+				E34190331F8576DE008ED84E /* NewCoffeeTableViewController.swift in Sources */,
+				E341902F1F857523008ED84E /* PublicCoffeeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudCoffee/CloudCoffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = 98H8AFME2H;
 				INFOPLIST_FILE = CloudCoffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.babo.nick.CloudCoffee;
@@ -494,7 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudCoffee/CloudCoffee.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = 98H8AFME2H;
 				INFOPLIST_FILE = CloudCoffee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.babo.nick.CloudCoffee;
