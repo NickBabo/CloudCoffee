@@ -11,6 +11,6 @@ import Foundation
 class Coffee {
     let name: String
     let stars: Int
-    let price: Double
+    let price: Int
     let location: String
 }
