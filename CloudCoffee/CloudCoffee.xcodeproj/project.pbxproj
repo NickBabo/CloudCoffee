@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */; };
+		B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9141F85679C00F60667 /* Coffee.swift */; };
 		E39BED801F8567F10055A5F5 /* PublicCoffeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */; };
 		E3D3C7D11F8546AC0066716B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D01F8546AC0066716B /* AppDelegate.swift */; };
 		E3D3C7D31F8546AC0066716B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D21F8546AC0066716B /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUser.swift; sourceTree = "<group>"; };
+		B0C3D9141F85679C00F60667 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		E39BED7F1F8567F10055A5F5 /* PublicCoffeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicCoffeeListViewController.swift; sourceTree = "<group>"; };
 		E3D3C7CD1F8546AB0066716B /* CloudCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3C7D01F8546AC0066716B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */,
+				B0C3D9141F85679C00F60667 /* Coffee.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -114,9 +119,9 @@
 		E3D3C7CF1F8546AC0066716B /* CloudCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				B0C3D9131F8565DA00F60667 /* Entity */,
 				E3D3C8011F8549090066716B /* CloudCoffee.entitlements */,
 				E3D3C7D01F8546AC0066716B /* AppDelegate.swift */,
-				B0C3D9141F85679C00F60667 /* Coffee.swift */,
 				E3D3C7D21F8546AC0066716B /* ViewController.swift */,
 				E3D3C7D41F8546AC0066716B /* Main.storyboard */,
 				E3D3C7DA1F8546AC0066716B /* Assets.xcassets */,
