@@ -12,11 +12,15 @@ import CloudKit
 class MyCoffeeTableViewController: UITableViewController {
     
     var myCoffees = [CKRecord]()
+    
+    var selectedPerson:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadData()
+
+        isAppAlreadyLaunchedOnce()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,7 +53,23 @@ class MyCoffeeTableViewController: UITableViewController {
             alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) in
                 let field = alert.textFields?.first
                 defaults.set(field?.text, forKey: "userToken")
+
+                let newPerson = CKRecord(recordType: "People")
+                newPerson["name"] = field?.text as CKRecordValue?
+                
+                let publicData = CKContainer.default().publicCloudDatabase
+                publicData.save(newPerson) { (record, error) in
+                    if error == nil{
+                        print("saved coffee!")
+                    }
+                }
+                
             }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            
             
         }
     }
@@ -57,15 +77,26 @@ class MyCoffeeTableViewController: UITableViewController {
     func loadData(){
         self.myCoffees = [CKRecord]()
         
+        var name = ""
+
+        if self.selectedPerson == nil{
+            name = UserDefaults.standard.string(forKey: "userToken")!
+        }else{
+            name = self.selectedPerson!
+        }
+        
         let publicData = CKContainer.default().publicCloudDatabase
-        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "owner == %@", argumentArray: [name]))
         
         publicData.perform(query, inZoneWith: nil) { (results, error) in
             if let coffees = results{
                 self.myCoffees = coffees
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
+        
     }
 
     // MARK: - Table view data source
@@ -95,7 +126,7 @@ class MyCoffeeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        return 85
     }
 
     /*
