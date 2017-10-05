@@ -15,14 +15,17 @@ class PublicCoffeeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
+        self.tableView.reloadData()
     }
     
     func loadData(){
@@ -34,7 +37,9 @@ class PublicCoffeeTableViewController: UITableViewController {
         publicData.perform(query, inZoneWith: nil) { (results, error) in
             if let people = results{
                 self.people = people
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
