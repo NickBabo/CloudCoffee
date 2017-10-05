@@ -79,7 +79,9 @@ class PeopleTableViewController: UITableViewController {
                 return record.object(forKey: "owner") as? String ?? "Aquele-que-não-deve-ser-nomeado"
             })
             
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     

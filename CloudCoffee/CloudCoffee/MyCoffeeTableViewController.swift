@@ -85,7 +85,7 @@ class MyCoffeeTableViewController: UITableViewController {
     func loadData(){
         self.myCoffees = [CKRecord]()
         
-        var name = ""
+        var name = UserDefaults.standard.string(forKey: "userToken")!
 
         if let provi = UserDefaults.standard.string(forKey: "userToken") {
             if selectedPerson != provi {
