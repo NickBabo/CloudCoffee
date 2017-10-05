@@ -11,7 +11,7 @@ import CloudKit
 
 class PeopleTableViewController: UITableViewController {
     
-    var people: [String]!
+    var people = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,7 @@ class PeopleTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return people.count
     }
 
@@ -48,20 +49,29 @@ class PeopleTableViewController: UITableViewController {
         // Configure the cell...
         
         if let person = cell as? NameTableViewCell {
-            person.nameLabel.text = "eu"
+            person.nameLabel.text = people[indexPath.row]
             return person
         }
         return cell
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateDataSource()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        updateDataSource()
+    }
+    
+    private func updateDataSource() {
         let publicData = CKContainer.default().publicCloudDatabase
         let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(value: true))
-        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        //query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         publicData.perform(query, inZoneWith: nil) { (results, error) in
             
             guard let safeResults = results, error == nil else {
                 print("Problemas")
+                print(error.debugDescription)
                 return
             }
             
@@ -71,7 +81,16 @@ class PeopleTableViewController: UITableViewController {
             
             self.tableView.reloadData()
         }
-        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toMyCoffeesFromExplore", sender: people[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMyCoffeesFromExplore" {
+            
+        }
     }
 
     /*

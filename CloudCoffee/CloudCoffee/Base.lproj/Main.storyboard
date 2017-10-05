@@ -13,7 +13,7 @@
         <!--Explore-->
         <scene sceneID="1iL-Gp-W6K">
             <objects>
-                <tableViewController id="o8V-rZ-wWx" customClass="PublicCoffeeTableViewController" customModule="CloudCoffee" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="o8V-rZ-wWx" customClass="PeopleTableViewController" customModule="CloudCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b0O-fF-aOV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,8 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-Mn-cNf">
-                                            <rect key="frame" x="16" y="11" width="337.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-Mn-cNf">
+                                            <rect key="frame" x="21" y="11" width="194" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -41,7 +42,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="SFW-Mn-cNf" id="hvN-1H-O0q"/>
-                                    <segue destination="cOb-Mj-s9Z" kind="show" identifier="nameCoffees" id="tap-eS-J5t"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,10 +52,13 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="FIK-NM-L1n"/>
                     <navigationItem key="navigationItem" title="Explore" id="xpG-mX-ynk"/>
+                    <connections>
+                        <segue destination="cOb-Mj-s9Z" kind="show" identifier="toMyCoffeesFromExplore" id="pve-pf-SCO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivv-E8-fnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1455" y="134"/>
+            <point key="canvasLocation" x="-1455.2" y="133.5832083958021"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Fay-J9-XyN">
@@ -319,6 +322,6 @@
         <image name="shop" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tap-eS-J5t"/>
+        <segue reference="pve-pf-SCO"/>
     </inferredMetricsTieBreakers>
 </document>
