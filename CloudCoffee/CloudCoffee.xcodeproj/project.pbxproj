@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		49754FE41F8575D0008314C4 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49754FE31F8575D0008314C4 /* NameTableViewCell.swift */; };
 		49754FE61F857670008314C4 /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49754FE51F857670008314C4 /* CoffeeTableViewCell.swift */; };
+		49754FE81F8579B8008314C4 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49754FE71F8579B8008314C4 /* PeopleTableViewController.swift */; };
 		B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */; };
 		B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3D9141F85679C00F60667 /* Coffee.swift */; };
 		E341902F1F857523008ED84E /* PublicCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */; };
@@ -21,31 +22,13 @@
 		E3D3C7D91F8546AC0066716B /* CloudCoffee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7D71F8546AC0066716B /* CloudCoffee.xcdatamodeld */; };
 		E3D3C7DB1F8546AC0066716B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D3C7DA1F8546AC0066716B /* Assets.xcassets */; };
 		E3D3C7DE1F8546AC0066716B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D3C7DC1F8546AC0066716B /* LaunchScreen.storyboard */; };
-		E3D3C7E91F8546AC0066716B /* CloudCoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7E81F8546AC0066716B /* CloudCoffeeTests.swift */; };
-		E3D3C7F41F8546AC0066716B /* CloudCoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3C7F31F8546AC0066716B /* CloudCoffeeUITests.swift */; };
 		E3D3C8041F8549110066716B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D3C8031F8549110066716B /* CloudKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E3D3C7E51F8546AC0066716B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E3D3C7C51F8546AB0066716B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E3D3C7CC1F8546AB0066716B;
-			remoteInfo = CloudCoffee;
-		};
-		E3D3C7F01F8546AC0066716B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E3D3C7C51F8546AB0066716B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E3D3C7CC1F8546AB0066716B;
-			remoteInfo = CloudCoffee;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		49754FE31F8575D0008314C4 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		49754FE51F857670008314C4 /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
+		49754FE71F8579B8008314C4 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		B0C3D9111F8565CF00F60667 /* CoffeeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUser.swift; sourceTree = "<group>"; };
 		B0C3D9141F85679C00F60667 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		E341902E1F857523008ED84E /* PublicCoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicCoffeeTableViewController.swift; sourceTree = "<group>"; };
@@ -60,10 +43,8 @@
 		E3D3C7DA1F8546AC0066716B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3D3C7DD1F8546AC0066716B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3D3C7DF1F8546AC0066716B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3D3C7E41F8546AC0066716B /* CloudCoffeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCoffeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3C7E81F8546AC0066716B /* CloudCoffeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCoffeeTests.swift; sourceTree = "<group>"; };
 		E3D3C7EA1F8546AC0066716B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3D3C7EF1F8546AC0066716B /* CloudCoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D3C7F31F8546AC0066716B /* CloudCoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCoffeeUITests.swift; sourceTree = "<group>"; };
 		E3D3C7F51F8546AC0066716B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3D3C8011F8549090066716B /* CloudCoffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudCoffee.entitlements; sourceTree = "<group>"; };
@@ -76,20 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D3C8041F8549110066716B /* CloudKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3D3C7E11F8546AC0066716B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3D3C7EC1F8546AC0066716B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				E3D3C7CD1F8546AB0066716B /* CloudCoffee.app */,
-				E3D3C7E41F8546AC0066716B /* CloudCoffeeTests.xctest */,
-				E3D3C7EF1F8546AC0066716B /* CloudCoffeeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,42 +167,6 @@
 			productReference = E3D3C7CD1F8546AB0066716B /* CloudCoffee.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E3D3C7E31F8546AC0066716B /* CloudCoffeeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E3D3C7FB1F8546AC0066716B /* Build configuration list for PBXNativeTarget "CloudCoffeeTests" */;
-			buildPhases = (
-				E3D3C7E01F8546AC0066716B /* Sources */,
-				E3D3C7E11F8546AC0066716B /* Frameworks */,
-				E3D3C7E21F8546AC0066716B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E3D3C7E61F8546AC0066716B /* PBXTargetDependency */,
-			);
-			name = CloudCoffeeTests;
-			productName = CloudCoffeeTests;
-			productReference = E3D3C7E41F8546AC0066716B /* CloudCoffeeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E3D3C7EE1F8546AC0066716B /* CloudCoffeeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E3D3C7FE1F8546AC0066716B /* Build configuration list for PBXNativeTarget "CloudCoffeeUITests" */;
-			buildPhases = (
-				E3D3C7EB1F8546AC0066716B /* Sources */,
-				E3D3C7EC1F8546AC0066716B /* Frameworks */,
-				E3D3C7ED1F8546AC0066716B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E3D3C7F11F8546AC0066716B /* PBXTargetDependency */,
-			);
-			name = CloudCoffeeUITests;
-			productName = CloudCoffeeUITests;
-			productReference = E3D3C7EF1F8546AC0066716B /* CloudCoffeeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,16 +189,6 @@
 							};
 						};
 					};
-					E3D3C7E31F8546AC0066716B = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E3D3C7CC1F8546AB0066716B;
-					};
-					E3D3C7EE1F8546AC0066716B = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E3D3C7CC1F8546AB0066716B;
-					};
 				};
 			};
 			buildConfigurationList = E3D3C7C81F8546AB0066716B /* Build configuration list for PBXProject "CloudCoffee" */;
@@ -286,8 +205,6 @@
 			projectRoot = "";
 			targets = (
 				E3D3C7CC1F8546AB0066716B /* CloudCoffee */,
-				E3D3C7E31F8546AC0066716B /* CloudCoffeeTests */,
-				E3D3C7EE1F8546AC0066716B /* CloudCoffeeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,20 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3D3C7E21F8546AC0066716B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3D3C7ED1F8546AC0066716B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -331,6 +234,7 @@
 				B0C3D9121F8565CF00F60667 /* CoffeeUser.swift in Sources */,
 				E3D3C7D11F8546AC0066716B /* AppDelegate.swift in Sources */,
 				B0C3D9151F85679C00F60667 /* Coffee.swift in Sources */,
+				49754FE81F8579B8008314C4 /* PeopleTableViewController.swift in Sources */,
 				49754FE61F857670008314C4 /* CoffeeTableViewCell.swift in Sources */,
 				E34190331F8576DE008ED84E /* NewCoffeeTableViewController.swift in Sources */,
 				E341902F1F857523008ED84E /* PublicCoffeeTableViewController.swift in Sources */,
@@ -338,36 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3D3C7E01F8546AC0066716B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3D3C7E91F8546AC0066716B /* CloudCoffeeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3D3C7EB1F8546AC0066716B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3D3C7F41F8546AC0066716B /* CloudCoffeeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E3D3C7E61F8546AC0066716B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E3D3C7CC1F8546AB0066716B /* CloudCoffee */;
-			targetProxy = E3D3C7E51F8546AC0066716B /* PBXContainerItemProxy */;
-		};
-		E3D3C7F11F8546AC0066716B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E3D3C7CC1F8546AB0066716B /* CloudCoffee */;
-			targetProxy = E3D3C7F01F8546AC0066716B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E3D3C7D41F8546AC0066716B /* Main.storyboard */ = {
@@ -528,72 +403,6 @@
 			};
 			name = Release;
 		};
-		E3D3C7FC1F8546AC0066716B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98H8AFME2H;
-				INFOPLIST_FILE = CloudCoffeeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.babo.nick.CloudCoffeeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCoffee.app/CloudCoffee";
-			};
-			name = Debug;
-		};
-		E3D3C7FD1F8546AC0066716B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98H8AFME2H;
-				INFOPLIST_FILE = CloudCoffeeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.babo.nick.CloudCoffeeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCoffee.app/CloudCoffee";
-			};
-			name = Release;
-		};
-		E3D3C7FF1F8546AC0066716B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98H8AFME2H;
-				INFOPLIST_FILE = CloudCoffeeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.babo.nick.CloudCoffeeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CloudCoffee;
-			};
-			name = Debug;
-		};
-		E3D3C8001F8546AC0066716B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98H8AFME2H;
-				INFOPLIST_FILE = CloudCoffeeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.babo.nick.CloudCoffeeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CloudCoffee;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,24 +420,6 @@
 			buildConfigurations = (
 				E3D3C7F91F8546AC0066716B /* Debug */,
 				E3D3C7FA1F8546AC0066716B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E3D3C7FB1F8546AC0066716B /* Build configuration list for PBXNativeTarget "CloudCoffeeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E3D3C7FC1F8546AC0066716B /* Debug */,
-				E3D3C7FD1F8546AC0066716B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E3D3C7FE1F8546AC0066716B /* Build configuration list for PBXNativeTarget "CloudCoffeeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E3D3C7FF1F8546AC0066716B /* Debug */,
-				E3D3C8001F8546AC0066716B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
