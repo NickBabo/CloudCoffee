@@ -75,9 +75,14 @@ class PeopleTableViewController: UITableViewController {
                 return
             }
             
-            self.people = safeResults.map({ (record) -> String in
-                return record.object(forKey: "owner") as? String ?? "Aquele-que-não-deve-ser-nomeado"
-            })
+            for result in safeResults {
+                let resultOwner = result.object(forKey: "owner") as? String ?? "Aquele-que-não-deve-ser-nomeado"
+                if !self.people.contains(resultOwner) {
+                    self.people.append(resultOwner)
+                }
+            }
+            
+            self.people = self.people.sorted()
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()

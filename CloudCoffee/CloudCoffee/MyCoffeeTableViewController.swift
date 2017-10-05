@@ -17,6 +17,7 @@ class MyCoffeeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         isAppAlreadyLaunchedOnce()
         loadData()
         // Uncomment the following line to preserve selection between presentations
@@ -85,7 +86,7 @@ class MyCoffeeTableViewController: UITableViewController {
     func loadData(){
         self.myCoffees = [CKRecord]()
         
-        var name = UserDefaults.standard.string(forKey: "userToken")!
+        var name: String!
 
         if let provi = UserDefaults.standard.string(forKey: "userToken") {
             if selectedPerson != provi {
@@ -93,20 +94,19 @@ class MyCoffeeTableViewController: UITableViewController {
             } else {
                 name = provi
             }
-        } else{
-            isAppAlreadyLaunchedOnce()
-        }
-        
-        let publicData = CKContainer.default().publicCloudDatabase
-        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "owner == %@", argumentArray: [name]))
-        
-        publicData.perform(query, inZoneWith: nil) { (results, error) in
-            if let coffees = results{
-                self.myCoffees = coffees
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+            let publicData = CKContainer.default().publicCloudDatabase
+            let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "owner == %@", argumentArray: [name]))
+            
+            publicData.perform(query, inZoneWith: nil) { (results, error) in
+                if let coffees = results{
+                    self.myCoffees = coffees
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             }
+        } else {
+            isAppAlreadyLaunchedOnce()
         }
         
     }
