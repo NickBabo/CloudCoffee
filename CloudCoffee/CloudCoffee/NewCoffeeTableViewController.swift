@@ -58,7 +58,7 @@ class NewCoffeeTableViewController: UITableViewController {
                 print("saved coffee!")
             }
         }
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
 

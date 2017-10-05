@@ -16,20 +16,42 @@ class MyCoffeeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
         self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func isAppAlreadyLaunchedOnce() {
+        let defaults = UserDefaults.standard
+        
+        if defaults.string(forKey: "isAppAlreadyLaunchedOnce") != nil{
+            
+        } else {
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            
+            let alert = UIAlertController(title: "Nome", message: "Qual é o seu nome?", preferredStyle: .alert)
+            alert.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "Seu Nome"
+            })
+            alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) in
+                let field = alert.textFields?.first
+                defaults.set(field?.text, forKey: "userToken")
+            }))
+            
+        }
     }
     
     func loadData(){
@@ -55,18 +77,26 @@ class MyCoffeeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.myCoffees.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CoffeeCell", for: indexPath) as! CoffeeTableViewCell
+        
+        cell.coffeNameLabel.text = self.myCoffees[indexPath.row].object(forKey: "name") as? String
+        cell.placeLabel.text = self.myCoffees[indexPath.row].object(forKey: "place") as? String
+        cell.priceLabel.text = self.myCoffees[indexPath.row].object(forKey: "price") as? String
+        cell.ratingLabel.text = self.myCoffees[indexPath.row].object(forKey: "stars") as? String
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125
+    }
 
     /*
     // Override to support conditional editing of the table view.
