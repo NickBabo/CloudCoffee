@@ -12,11 +12,14 @@ import CloudKit
 class MyCoffeeTableViewController: UITableViewController {
     
     var myCoffees = [CKRecord]()
+    
+    var selectedPerson:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadData()
+
         isAppAlreadyLaunchedOnce()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -74,8 +77,16 @@ class MyCoffeeTableViewController: UITableViewController {
     func loadData(){
         self.myCoffees = [CKRecord]()
         
+        var name = ""
+
+        if self.selectedPerson == nil{
+            name = UserDefaults.standard.string(forKey: "userToken")!
+        }else{
+            name = self.selectedPerson!
+        }
+        
         let publicData = CKContainer.default().publicCloudDatabase
-        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
+        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "owner == %@", argumentArray: [name]))
         
         publicData.perform(query, inZoneWith: nil) { (results, error) in
             if let coffees = results{
@@ -115,7 +126,7 @@ class MyCoffeeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        return 85
     }
 
     /*

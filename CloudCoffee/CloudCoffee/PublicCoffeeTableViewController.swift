@@ -15,6 +15,7 @@ class PublicCoffeeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         
     }
 
@@ -80,16 +81,19 @@ class PublicCoffeeTableViewController: UITableViewController {
         return self.people.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pessoa", for: indexPath) as! NameTableViewCell
+        
+        cell.nameLabel.text = people[indexPath.row].object(forKey: "name") as? String
+        
         return cell
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "nameCoffees"{
+            (segue.destination as! MyCoffeeTableViewController).selectedPerson = self.people[(self.tableView.indexPathForSelectedRow?.row)!].object(forKey: "name") as? String
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
