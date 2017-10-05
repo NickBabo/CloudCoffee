@@ -17,8 +17,6 @@ class MyCoffeeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadData()
 
         isAppAlreadyLaunchedOnce()
         // Uncomment the following line to preserve selection between presentations
@@ -29,7 +27,10 @@ class MyCoffeeTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        loadData()
+        if UserDefaults.standard.string(forKey: "isAppAlreadyLaunchedOnce") != nil{
+            loadData()
+        }
+        
         self.tableView.reloadData()
     }
 
@@ -42,7 +43,7 @@ class MyCoffeeTableViewController: UITableViewController {
         let defaults = UserDefaults.standard
         
         if defaults.string(forKey: "isAppAlreadyLaunchedOnce") != nil{
-            
+            loadData()
         } else {
             defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
             
@@ -77,11 +78,9 @@ class MyCoffeeTableViewController: UITableViewController {
     func loadData(){
         self.myCoffees = [CKRecord]()
         
-        var name = ""
+        var name = UserDefaults.standard.string(forKey: "userToken")!
 
-        if self.selectedPerson == nil{
-            name = UserDefaults.standard.string(forKey: "userToken")!
-        }else{
+        if self.selectedPerson != nil{
             name = self.selectedPerson!
         }
         
