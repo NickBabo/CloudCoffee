@@ -15,7 +15,6 @@ class PublicCoffeeListViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
         // Do any additional setup after loading the view.
     }
     
@@ -24,19 +23,6 @@ class PublicCoffeeListViewController: UIViewController, UITableViewDelegate, UIT
         // Dispose of any resources that can be recreated.
     }
     
-    func loadData(){
-        self.publicCoffeeList = [CKRecord]()
-        
-        let publicData = CKContainer.default().publicCloudDatabase
-        let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(format: "TRUEPREDICATE", argumentArray: nil))
-        
-        publicData.perform(query, inZoneWith: nil) { (results, error) in
-            if let coffees = results{
-                self.publicCoffeeList = coffees
-                
-            }
-        }
-    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

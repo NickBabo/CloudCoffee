@@ -13,6 +13,7 @@ enum CoffeeKey: String {
     case stars
     case price
     case location
+    case owner
 }
 
 class Coffee{
@@ -20,5 +21,5 @@ class Coffee{
     let stars: Int = 0
     let price: Int = 0
     let location:String = ""
-    
+    let owner:String = ""
 }
