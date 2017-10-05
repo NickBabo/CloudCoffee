@@ -12,15 +12,13 @@ import CloudKit
 class MyCoffeeTableViewController: UITableViewController {
     
     var myCoffees = [CKRecord]()
-    
-    var selectedPerson:String?
 
+    var selectedPerson: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadData()
-
         isAppAlreadyLaunchedOnce()
+        loadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,8 +27,16 @@ class MyCoffeeTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        isAppAlreadyLaunchedOnce()
         loadData()
         self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        isAppAlreadyLaunchedOnce()
+        loadData()
+        self.tableView.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,11 +47,13 @@ class MyCoffeeTableViewController: UITableViewController {
     func isAppAlreadyLaunchedOnce() {
         let defaults = UserDefaults.standard
         
-        if defaults.string(forKey: "isAppAlreadyLaunchedOnce") != nil{
-            
+        if let name = defaults.object(forKey: "userToken"){
+            if let _ = selectedPerson {
+                
+            } else {
+            self.selectedPerson = name as? String
+            }
         } else {
-            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
-            
             let alert = UIAlertController(title: "Nome", message: "Qual é o seu nome?", preferredStyle: .alert)
             alert.addTextField(configurationHandler: { (textField) in
                 textField.placeholder = "Seu Nome"
@@ -79,10 +87,14 @@ class MyCoffeeTableViewController: UITableViewController {
         
         var name = ""
 
-        if self.selectedPerson == nil{
-            name = UserDefaults.standard.string(forKey: "userToken")!
-        }else{
-            name = self.selectedPerson!
+        if let provi = UserDefaults.standard.string(forKey: "userToken") {
+            if selectedPerson != provi {
+                name = selectedPerson!
+            } else {
+                name = provi
+            }
+        } else{
+            isAppAlreadyLaunchedOnce()
         }
         
         let publicData = CKContainer.default().publicCloudDatabase
