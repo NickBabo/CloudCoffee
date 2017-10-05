@@ -57,6 +57,7 @@ class PeopleTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         let publicData = CKContainer.default().publicCloudDatabase
         let query = CKQuery(recordType: "Coffee", predicate: NSPredicate(value: true))
+        NSPredicate(format: <#T##String#>, arguments: <#T##CVaListPointer#>)
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         publicData.perform(query, inZoneWith: nil) { (results, error) in
             
